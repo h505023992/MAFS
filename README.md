@@ -22,7 +22,11 @@ The project is divided into two subfolders according to the **sub-task division 
 
 ### Model Architecture
 
-**![TwoStage](README.assets/TwoStage.png)**
+
+
+![TwoStage](README.assets/TwoStage.png)
+
+
 
 Each agent is implemented by iTransformer Architecture. The overall framework follows a **pre-training → fine-tuning** paradigm:
 
