@@ -24,7 +24,7 @@ The project is divided into two subfolders according to the **sub-task division 
 
 **![TwoStage](README.assets/TwoStage.png)**
 
-The overall framework follows a **pre-training → fine-tuning** paradigm:
+Each agent is implemented by iTransformer Architecture. The overall framework follows a **pre-training → fine-tuning** paradigm:
 
 * During **pre-training**, each agent is trained to specialize in its assigned forecasting sub-task. Agents communicate via the `communication` module using one of four predefined **fixed-topology graphs**:
 
@@ -72,7 +72,7 @@ For single-agent comparisons, you may run experiments in the `./single_agent_for
 
 ### Results
 
-Our multi-agent forecasting system (MAFS) achieves a **5.6%–13.6% improvement** in forecasting performance compared to single-model baselines.
+Our multi-agent forecasting system (MAFS) achieves a **6.35% improvement** in forecasting performance compared to single-model baselines.
 
 Despite using **iTransformer** (not the current SOTA) as the agent backbone, MAFS achieves:
 
@@ -97,6 +97,9 @@ We further analyze the effect of the **number of agents** and the **communicatio
 <div align="center">
   <img src="README.assets/Agent_num.png" width="80%">
 </div>
+
+---
+
 ### Case Study
 
 <div align="center">
