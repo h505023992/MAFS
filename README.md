@@ -2,7 +2,6 @@
 
 This repository contains the official implementation of our paper **"Many Minds, One Goal: Time Series Forecasting via Sub-task Specialization and Inter-agent Cooperation."**
 
-![model](README.assets/model.png)
 
 ---
 
@@ -11,7 +10,7 @@ This repository contains the official implementation of our paper **"Many Minds,
 The project is divided into two subfolders according to the **sub-task division strategies for agent specialization**:
 
 * `heterogeneous_sub_task`: Agents are assigned *heterogeneous forecasting tasks*, each focusing on different aspects of the time series, including:
-* Statistical characteristics
+  * Statistical characteristics
   * Spectral energy distribution
   * Future seasonality
   * Future trend
@@ -21,11 +20,6 @@ The project is divided into two subfolders according to the **sub-task division 
 ---
 
 ### Model Architecture
-
-
-
-![TwoStage](README.assets/TwoStage.png)
-
 
 
 Each agent is implemented by iTransformer Architecture. The overall framework follows a **pre-training → fine-tuning** paradigm:
@@ -45,14 +39,7 @@ Each agent is implemented by iTransformer Architecture. The overall framework fo
 
 We evaluate our method on **11 public benchmark datasets**:
 
-* From [Autoformer](https://github.com/thuml/Autoformer):
-  `ETTh1`, `ETTh2`, `ETTm1`, `ETTm2`, `Weather`
-
-* From [TFB](https://github.com/decisionintelligence/TFB):
-  `AQShunyi`, `AQWan`, `CzeLan`, `ZafNoo`
-
-* From [PM2.5 Benchmark](https://github.com/shuowang-ai/PM2.5-GNNr):
-  `PM2.5`, `Temp`
+`ETTh1`, `ETTh2`, `ETTm1`, `ETTm2`, `Weather`, `AQShunyi`, `AQWan`, `CzeLan`, `ZafNoo`, `PM2.5`, `Temp`
 
 Place all datasets under the `./dataset` directory.
 
