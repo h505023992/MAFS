@@ -2,6 +2,8 @@
 
 This repository contains the official implementation of our paper **"Many Minds, One Goal: Time Series Forecasting via Sub-task Specialization and Inter-agent Cooperation."**
 
+![model](README.assets/model.png)
+
 ---
 
 ### Project Structure
@@ -20,6 +22,8 @@ The project is divided into two subfolders according to the **sub-task division 
 
 ### Model Architecture
 
+**![TwoStage](README.assets/TwoStage.png)**
+
 The overall framework follows a **pre-training → fine-tuning** paradigm:
 
 * During **pre-training**, each agent is trained to specialize in its assigned forecasting sub-task. Agents communicate via the `communication` module using one of four predefined **fixed-topology graphs**:
@@ -29,7 +33,7 @@ The overall framework follows a **pre-training → fine-tuning** paradigm:
 
 * In the **fine-tuning phase**, all agents are **frozen**, and the fixed communication edges are replaced with **learnable weights**, enabling the system to learn optimal communication flows specific to the forecasting objective.
 
-* A final **Agent-Rated Voting Predictor** integrates the predictions from all agents to produce the final output, leveraging collective intelligence.
+* A final **Agent-Rated Voting Aggregator** integrates the predictions from all agents to produce the final output, leveraging collective intelligence.
 
 ---
 
@@ -93,4 +97,8 @@ We further analyze the effect of the **number of agents** and the **communicatio
 <div align="center">
   <img src="README.assets/Agent_num.png" width="80%">
 </div>
+### Case Study
 
+<div align="center">
+  <img src="README.assets/CaseStudy.png" width="80%">
+</div>
